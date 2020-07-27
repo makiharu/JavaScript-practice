@@ -1,29 +1,20 @@
 'use strict';
 
-// {
-// 	//偶数の要素だけ配列として抽出する方法は
-// 	const numbers = [1, 4, 7,8,10];
+{
+	const otherProps = {
+		r: 4,
+		color: 'red',
+	};
 
-// 	//その１
-// 	// const evenNumbers = numbers.filter(number => {
-// 	// 	if (number % 2 === 0) {
-// 	// 		return true;
-// 	// 	} else {
-// 	// 		return false;
-// 	// 	}
-// 	// });
+	const point = {
+		x: 100,
+		y: 180,
+		...otherProps,
+	};
+	// console.log(point);
 
-// 	// console.log(evenNumbers);
-
-// 	//１よりも簡単に
-// 	const evenNumbers = numbers.filter(number => number % 2 === 0);
-// 	console.log(evenNumbers);
-// }
-
-
-//オブジェクト記法
-
-//const ponit = [100, 180];
-
-const point = {x: 100, y: 180};
-console.log(ponit);
+	const {x, r, ...others} = point;
+	console.log(x);
+	console.log(r);
+	console.log(others);
+}
