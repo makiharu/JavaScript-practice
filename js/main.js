@@ -1,15 +1,14 @@
 'use strict';
 
 {
-	const scores = [80,90,40]
+	const otherScores = [10, 20];
+	const scores = [80, 90, 40, 70, ...otherScores];
 
-	scores.splice(1,1, 30,60,90);
-	//80 30 60 90 40
-
-
-	for (let i = 0; i < scores.length; i ++) {
-		console.log(`Score ${i}: ${scores[i]}`);
+	function sum(a, b) {
+		console.log(a + b);
 	}
-}
 
-//splice(変化が開始する位置, 削除数, 追加する要素)
+	sum(...otherScores);
+	//sum(10,20)
+
+}
