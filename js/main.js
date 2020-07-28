@@ -1,25 +1,14 @@
 'use strict';
 
 {
-// 	let x = 1;
-// 	let y = x;
-// 	x = 5;
-// 	console.log(x); //5
-// 	console.log(y); //1
+	const str = "hello";
+	// console.log(str.length);
 
-	// let x = [1,5];
-	// let y = x;
-	// x[0] = 5;
+	//console.log(str.substring(開始位置, 終了位置));
 
-	// console.log(x); //1,5
-	// console.log(y); //1,5
+	console.log(str.substring(2,4));
 
-	let x = [1,5];
-	let y = [...x];
-	x[0] = 5;
-
-	console.log(x); //1,5
-	console.log(y); //1,5
+	console.log(str[2])
 
 
  }
