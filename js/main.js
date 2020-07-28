@@ -1,16 +1,21 @@
 'use strict';
 
 {
-	const str = "hello";
-	// console.log(str.length);
+	//join()
+	//1 /区切りの方法
+	//2 区切りなし表示
+	const d = [2020, 7, 28];
+	console.log(d.join('/')); //1 2020/7/28
+	console.log(d.join('')); //2 2020728
 
-	//console.log(str.substring(開始位置, 終了位置));
+	//split()
+	const t = '17:08:24';
+	console.log(t.split(':'));
 
-	console.log(str.substring(2,4));
-
-	console.log(str[2])
-
-
+	const [hour, minute, second] = t.split(':');
+	console.log(hour);
+	console.log(minute);
+	console.log(second);
  }
 
 
