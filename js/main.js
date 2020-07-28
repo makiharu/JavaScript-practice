@@ -1,20 +1,27 @@
 'use strict';
 
 {
-	const otherProps = {
-		r: 4,
-		color: 'red',
-	};
+// 	let x = 1;
+// 	let y = x;
+// 	x = 5;
+// 	console.log(x); //5
+// 	console.log(y); //1
 
-	const point = {
-		x: 100,
-		y: 180,
-		...otherProps,
-	};
-	// console.log(point);
+	// let x = [1,5];
+	// let y = x;
+	// x[0] = 5;
 
-	const {x, r, ...others} = point;
-	console.log(x);
-	console.log(r);
-	console.log(others);
-}
+	// console.log(x); //1,5
+	// console.log(y); //1,5
+
+	let x = [1,5];
+	let y = [...x];
+	x[0] = 5;
+
+	console.log(x); //1,5
+	console.log(y); //1,5
+
+
+ }
+
+
