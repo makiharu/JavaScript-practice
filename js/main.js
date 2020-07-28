@@ -1,16 +1,20 @@
 'use strict';
 
 {
-	let i = 0;
-	function showTime() {
-		console.log(new Date());
-		const timeoutID = setTimeout(showTime, 1000);
-		i ++;
-		if (i > 2) {
-			clearTimeout(timeoutID);
-		}
+	//ユーザーから文字を受け取って、大文字にする
+	//文字型ではなく、数値が値として渡った場合の処理方法について
+
+	const name = '5';
+
+	try {
+		console.log(name.toUpperCase());
+	} catch (e) {
+		console.log(e);
 	}
 
-	showTime();
+
+	console.log('Finish');
 }
+
+
 
