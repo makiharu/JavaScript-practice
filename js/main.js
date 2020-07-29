@@ -1,8 +1,13 @@
 'use strinct';
 
-
 {
   document.querySelector('button').addEventListener('click', () => {
-    document.getElementById('target').textContent = 'Changed!';
+  	const targetNode = document.getElementById('target');
+    targetNode.textContent = 'Changed!';
+    targetNode.title = 'This is title';
+    targetNode.style.color = 'lightgreen';
+    targetNode.style.backgroundColor = 'skyblue';
   });
 }
+
+
