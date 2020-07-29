@@ -1,19 +1,20 @@
 'use strinct';
-// セレクトボックス(赤、青、黄)
+// チェックボックス(赤、青、黄)
 
 {
-  document.querySelector('button').addEventListener('click', () => {
-    const colors = document.querySelectorAll('input');
-    let selectedColor;
+	document.querySelector('button').addEventListener('click', () => {
+		const colors = document.querySelectorAll('input');
+		const selectedColors = [];
 
-    colors.forEach(color => {
-      if (color.checked === true) {
-        selectedColor = color.value;
-      }
+		colors.forEach(color => {
+			if (color.checked === true) {
+			  selectedColors.push(color.value);
+		}
+	});
+
+		const li = document.createElement('li');
+		//li.textContent = selectedColors.join(',');
+		li.textContent = selectedColors;
+		document.querySelector('ul').appendChild(li);
     });
-
-    const li = document.createElement('li');
-    li.textContent = selectedColor;
-    document.querySelector('ul').appendChild(li);
-  });
 }
