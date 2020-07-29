@@ -2,19 +2,13 @@
 // チェックボックス(赤、青、黄)
 
 {
-	document.querySelector('button').addEventListener('click', () => {
-		const colors = document.querySelectorAll('input');
-		const selectedColors = [];
-
-		colors.forEach(color => {
-			if (color.checked === true) {
-			  selectedColors.push(color.value);
-		}
+	//ダブルクリック
+	document.querySelector('button').addEventListener('dblclick', () => {
+		console.log('Double cliccked');
+	});
+	//マウス移動
+	document.querySelector('button').addEventListener('mousemove', () => {
+		console.log('move');
 	});
 
-		const li = document.createElement('li');
-		//li.textContent = selectedColors.join(',');
-		li.textContent = selectedColors;
-		document.querySelector('ul').appendChild(li);
-    });
 }
