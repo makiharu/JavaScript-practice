@@ -17,17 +17,39 @@
 			this.likeCount++;
 			this.show;
 		}
+
 	}
+	//クラスの拡張
+	class SponsoredPost {
+		constructor(text, sponsor) {
+			this.text = text;
+			this.likeCount = 0;
+			this.sponsor = sponsor;
+		}
+
+		show() {
+			console.log(`${this.text} - ${this.likeCount}`);
+			console.log(`... sponsored by ${this.sponsor}`);
+		}
+
+		like() {
+			this.likeCount++;
+			this.show();
+		}
+	}
+
 
 
 	const posts = [
 		new Post('JacaScriptの勉強'),
-		new Post('プログラミング学習')
+		new Post('プログラミング学習'),
+		new SponsoredPost('JSを使いこなす', 'hogehoge'),
 	];
 
-	posts[0].like();
-	//show(posts[0]);
-	posts[1].show();
-	posts[0].show();
+	posts[2].show();//JSを使いこなす - 0
+					// ... sponsored by hogehoge
+	posts[2].like();//JSを使いこなす - 1
+					// ... sponsored by hogehoge
 }
+
 
