@@ -1,7 +1,7 @@
 'use strict';
 
 {
-	class Post {
+	class Post {//親クラス
 		constructor(text) {
 			this.text = text;
 			this.likeCount = 0;
@@ -15,30 +15,25 @@
 
 		like() {
 			this.likeCount++;
-			this.show;
+			this.show();
 		}
 
 	}
 	//クラスの拡張
-	class SponsoredPost {
+	//SponsoredPost クラスには like() メソッドはないが、 Post クラスの like() メソッドが引き継がれる
+	class SponsoredPost extends Post{//子クラス　継承
 		constructor(text, sponsor) {
-			this.text = text;
-			this.likeCount = 0;
+			super(text);//親クラスのconstructorを呼ぶ
 			this.sponsor = sponsor;
 		}
 
 		show() {
-			console.log(`${this.text} - ${this.likeCount}`);
+			//こちらの処理ですが、親クラスの show() メソッドを使えば良いので、その場合 super に繋げて書けば
+			//親クラスのメソッドを呼べるというルールもある。
+			super.show();
 			console.log(`... sponsored by ${this.sponsor}`);
 		}
-
-		like() {
-			this.likeCount++;
-			this.show();
-		}
 	}
-
-
 
 	const posts = [
 		new Post('JacaScriptの勉強'),
@@ -51,5 +46,3 @@
 	posts[2].like();//JSを使いこなす - 1
 					// ... sponsored by hogehoge
 }
-
-
