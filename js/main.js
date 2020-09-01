@@ -1,14 +1,13 @@
 'use strict';
 
-function showAdd() {
-	console.log('---------');
-	console.log(' ----Ad-----');
-	console.log('---------');
-}
 
-showAdd();
-console.log('tom is great');
-showAdd();
-console.log('Bob is great');
-showAdd();
-console.log('May is great!');
+// function sum(a,b,c) {
+// 	return a + b + c;
+// }
+
+const sum = function(a,b,c) {
+	return a + b + c;
+};
+
+const total = sum(5,4,3) + sum(1,3,4);
+console.log(total);
