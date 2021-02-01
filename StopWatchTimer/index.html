@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatchApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Semantic UI CDN-->
+    <!--読み込み順序に注意すること-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+   
+</head>
+<body>
+    <div class="ui inverted segment">
+        <div id="timer">00:00:00</div>
+        <button class="ui inverted green button" id="start">Start</button>
+        <button class="ui inverted red button" id="stop">Stop</button>
+        <button class="ui inverted yellow button" id="reset">Reset</button>
+    </div>
+</body>
+<!--HTMLを読み込んでから-->
+<script src="js/main.js"></script>
+</html>
