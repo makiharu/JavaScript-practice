@@ -8,13 +8,23 @@
   
     function countUp() {
       console.log(Date.now() - startTime);
+      const d = new Date(Date.now() - startTime);
+      const m = String(d.getMinutes()).padStart(2, '0');
+      const s = String(d.getSeconds()).padStart(3, '0');
+      const ms = String(d.getMilliseconds()).padStart(3, '0');
+  
+
       setTimeout(() => {
         countUp();
       }, 10);
     }
   
     start.addEventListener('click', () => {
+      //現在までのミリ秒を返す
       startTime = Date.now();
       countUp();
     });
+
+
+
   }
