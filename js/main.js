@@ -1,10 +1,10 @@
 'use strict';
 {
-	function update() {
-		 document.getElementById('target').textContent = 'こんにちは';
-		document.querySelectorAll('p').forEach((p, index) => {
-			p.textContent = `${index}番目のpです！`;
-		});
-	}
-	setTimeout(update, 1000);
+	const counter = document.getElementById('counter');
+	counter.addEventListener('click', () =>{
+		let n = counter.textContent;
+		let num = parseInt(counter.textContent, 10);
+		n = num + 1;
+		console.log(n);
+	});
 }
