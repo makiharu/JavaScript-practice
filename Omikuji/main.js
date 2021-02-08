@@ -6,7 +6,7 @@
 
     //おみくじボタンを押下した場合
     btn.addEventListener('click', () => {
-        const msg = ['ストップウォッチを15分以内に作成する', 'おみくじを作成する', '新しいことを学ぶ'];
+        const msg = ['ストップウォッチを15分以内に作成する', 'おみくじを作成する', '基本情報の問題を15問解く', '新しいことを学ぶ'];
         const n = Math.floor(Math.random() * msg.length);
     
         if(n < 0.3) {
